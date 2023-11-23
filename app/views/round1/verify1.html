@@ -1,0 +1,47 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Digital Idenity Verification" %}
+
+{% block content %}
+
+<div class="govuk-grid-row bg-blue">
+
+  <div class="govuk-grid-column-two-thirds verify-container">
+    <div class="govuk-form-group govuk-!-margin-bottom-0">
+
+      <p class="govuk-body govuk-!-font-weight-bold white">
+        You need to verify your idenity to prevent someone from pretending to be you
+      </p>
+
+      <div class="verifyIcons govuk-!-margin-bottom-3">
+        <img class="" src="/../public/images/timeIcon.png" alt="Timer"/>
+        <p class="govuk-body white govuk-!-margin-bottom-0"><span class="govuk-!-font-weight-bold">Fast</span> - takes about 10 minuetes</p>
+      </div>
+
+      <div class="verifyIcons govuk-!-margin-bottom-3">
+        <img class="" src="/../public/images/padlockIcon.png" alt="Padlock"/>
+        <p class="govuk-body white govuk-!-margin-bottom-0"><span class="govuk-!-font-weight-bold">Secure</span> - helps protect against idenity theft</p>
+      </div>
+
+      <div class="verifyIcons govuk-!-margin-bottom-8">
+        <img class="" src="/../public/images/tickIcon.png" alt="Tick"/>
+        <p class="govuk-body white govuk-!-margin-bottom-0"><span class="govuk-!-font-weight-bold">Verify once</span> - access many GOV.UK services</p>
+      </div>
+
+      <form action="verify2" method="post">
+        <button class="govuk-button verifyButton govuk-button--inverse govuk-!-margin-bottom-0 govuk-body govuk-!-font-weight-bold" data-module="govuk-button">
+              Next
+        </button>
+      </form>
+
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-third  verifyLogoContatiner">
+    <img class="verifyLogo" src="/../public/images/verifyLogo.png" alt="Logo"/>
+    <p class="white govuk-body-l"><span class="govuk-!-font-weight-bold">GOV.UK</span> VERIFY</p>
+  </div>
+
+</div>
+
+{% endblock %}

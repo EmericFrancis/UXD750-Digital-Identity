@@ -1,0 +1,52 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Digital Idenity Verification" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-two-thirds">
+    
+    <h1 class="govuk-heading-l">Verify your idenity</h1>
+
+    <form action="verify5" method="post">
+    
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-!-font-weight-bold">
+              Select all the idenity documents you have
+          </legend>
+          <div class="govuk-hint">
+            You'll need to use one of these documents to prove your idenity
+          </div>
+          <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="idType" name="idType" type="checkbox" value="passport">
+              <label class="govuk-label govuk-checkboxes__label" for="idType">
+                Valid UK Passport
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="idType-2" name="idType" type="checkbox" value="driving">
+              <label class="govuk-label govuk-checkboxes__label" for="idType-2">
+                Valid UK driving licence
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+    <button class="govuk-button" data-module="govuk-button">
+      Next
+    </button>
+
+    </form>
+
+  </div>
+    
+
+
+</div>
+
+{% endblock %}

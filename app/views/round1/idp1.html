@@ -1,0 +1,97 @@
+{% extends "govuk-prototype-kit/layouts/unbranded.html" %}
+
+{% block pageTitle %}
+  Experian Idenity Provider
+{% endblock %}
+
+{% block header %}
+  <div class="globalLinks">
+  <div class="idpHeader">
+      <div class="globalLinks">
+        <div class="idpHeaderContainer globalLinksMain">
+          <ul class="navLinks">
+            <li>
+              <a class="globalNav" href="#">Consumer</a>
+            </li>
+            <li>
+              <a class="globalNav" href="#">Small Business</a>
+            </li>
+            <li>
+              <a class="globalNav" href="#">Business</a>
+            </li>
+          <li>
+            <a class="globalNav" href="#">Data & Marketing</a>
+          </li>
+          <li>
+            <a class="globalNav" href="#">Your privacy</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="idpHeaderContainer idpHeaderMain">
+      <img class="experianLogo" src="/../public/images/experianLogo.png" alt="Logo"/>
+      <ul class="navLinks">
+          <li>
+            <a class="" href="#">Credit score & report</a>
+          </li>
+          <li>
+            <a class="" href="#">Compare credit offers</a>
+          </li>
+          <li>
+            <a class="" href="#">Idenity theft</a>
+          </li>
+          <li>
+            <a class="" href="#">More</a>
+          </li>
+      </ul>
+      <img class="verifyCertified" src="/../public/images/verifyCertified.png" alt="Logo"/>
+    </div>
+
+  </div>
+
+    <div class="progressIndicator">
+      <div class="active"><p class="govuk-body-s">1. Create Profile</p></div>
+      <div class="deactive"><p class="govuk-body-s">2. Personal details</p></div>
+      <div class="deactive"><p class="govuk-body-s">3. Proof of idenity</p></div>
+      <div class="deactive"><p class="govuk-body-s">4. Idenity test</p></div>
+      <div class="deactive"><p class="govuk-body-s">5. Phone</p></div>
+    </div>
+
+{% endblock %}
+
+{% block content %}
+
+  <h1 class="govuk-heading-l">
+    Verify your idenity
+  </h1>
+  <h2 class="govuk-heading-m govuk-!-font-weight-regular">Create your sign in</h2>
+
+  <form action="idp1" method="post">
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="email">
+        Your email address
+      </label>
+      <p class="govuk-body">
+      <input class="govuk-input govuk-input--width-20" id="email" name="email" type="text">
+    </div>
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="password">
+        Password
+      </label>
+      <input class="govuk-input govuk-input--width-20" id="password" name="password" type="password">
+      <p class="govuk-body govuk-!-margin-top-3">You password must have:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>at least 8 charachters</li>
+        <li>at least one symbol (eg !£&)</li>
+        <li>at least one capital letter</li>
+      </ul>
+    </div>
+
+    <button class="govuk-button" data-module="govuk-button">
+      Next
+    </button>
+  </form>
+
+
+
+{% endblock %}

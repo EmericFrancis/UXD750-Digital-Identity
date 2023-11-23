@@ -1,0 +1,174 @@
+{% extends "govuk-prototype-kit/layouts/unbranded.html" %}
+
+{% block pageTitle %}
+  Experian Idenity Provider
+{% endblock %}
+
+{% block header %}
+  <div class="globalLinks">
+  <div class="idpHeader">
+      <div class="globalLinks">
+        <div class="idpHeaderContainer globalLinksMain">
+          <ul class="navLinks">
+            <li>
+              <a class="globalNav" href="#">Consumer</a>
+            </li>
+            <li>
+              <a class="globalNav" href="#">Small Business</a>
+            </li>
+            <li>
+              <a class="globalNav" href="#">Business</a>
+            </li>
+          <li>
+            <a class="globalNav" href="#">Data & Marketing</a>
+          </li>
+          <li>
+            <a class="globalNav" href="#">Your privacy</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="idpHeaderContainer idpHeaderMain">
+      <img class="experianLogo" src="/../public/images/experianLogo.png" alt="Logo"/>
+      <ul class="navLinks">
+          <li>
+            <a class="" href="#">Credit score & report</a>
+          </li>
+          <li>
+            <a class="" href="#">Compare credit offers</a>
+          </li>
+          <li>
+            <a class="" href="#">Idenity theft</a>
+          </li>
+          <li>
+            <a class="" href="#">More</a>
+          </li>
+      </ul>
+      <img class="verifyCertified" src="/../public/images/verifyCertified.png" alt="Logo"/>
+    </div>
+
+  </div>
+
+    <div class="progressIndicator">
+      <div class="active"><p class="govuk-body-s">1. Create Profile</p></div>
+      <div class="active"><p class="govuk-body-s">2. Personal details</p></div>
+      <div class="active"><p class="govuk-body-s">3. Proof of idenity</p></div>
+      <div class="deactive"><p class="govuk-body-s">4. Idenity test</p></div>
+      <div class="deactive"><p class="govuk-body-s">5. Create Profile</p></div>
+    </div>
+
+{% endblock %}
+
+{% block content %}
+
+  <span class="govuk-caption-l">Copy of you driving licence details</span>
+  <h1 class="govuk-heading-l">
+    Proof of idenity
+  </h1>
+
+  <p class="govuk-body govuk-!-margin-bottom-5">The details you enter here must match exactly whats on your driving licence.</p>
+
+  <img class="drivingLicenceImg" src="/../public/images/drivinglicence.png" alt="Driving Licence"/>
+
+  <form action="taskPause3" method="post">
+  
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" role="group" aria-describedby="issue-hint">
+        <legend class="govuk-fieldset__legend govuk-!-font-weight-regular">
+          Issue date
+        </legend>
+        <div id="issue-hint" class="govuk-hint">
+          Section 4a on your drving licence
+        </div>
+        <div class="govuk-date-input" id="issue">
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="issue-day">
+                Day
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="issue-day" name="issue-day" type="text" inputmode="numeric">
+            </div>
+          </div>
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="issue-month">
+                Month
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="issue-month" name="issue-month" type="text" inputmode="numeric">
+            </div>
+          </div>
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="issue-year">
+                Year
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="issue-year" name="issue-year" type="text" inputmode="numeric">
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" role="group" aria-describedby="expiry-hint">
+        <legend class="govuk-fieldset__legend govuk-!-font-weight-regular">
+          Expiry date
+        </legend>
+        <div id="expiry-hint" class="govuk-hint">
+          Section 4b on your driving licence
+        </div>
+        <div class="govuk-date-input" id="expiry">
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="expiry-day">
+                Day
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="expiry-day" name="expiry-day" type="text" inputmode="numeric">
+            </div>
+          </div>
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="expiry-month">
+                Month
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="expiry-month" name="expiry-month" type="text" inputmode="numeric">
+            </div>
+          </div>
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="expiry-year">
+                Year
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="expiry-year" name="expiry-year" type="text" inputmode="numeric">
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+    <div class="govuk-form-group">
+      <label class="govuk-label govuk-!-font-weight-regular" for="licence-number">
+        Licence number
+      </label>
+      <div id="licence-number-hint" class="govuk-hint">
+        Section 5 on your driving licence
+      </div>
+      <input class="govuk-input govuk-input--width-20" id="licence-number" name="licenceNumber" type="text" aria-describedby="licence-number-hint">
+    </div>
+    <div class="govuk-form-group">
+      <label class="govuk-label govuk-!-font-weight-regular" for="issue-number">
+        Issue number
+      </label>
+      <div id="issue-number-hint" class="govuk-hint">
+        The 2 digits after your licence number
+      </div>
+      <input class="govuk-input govuk-input--width-4" id="issue-number" name="issueNumber" type="text" aria-describedby="issue-number-hint">
+    </div>
+
+  <button class="govuk-button" data-module="govuk-button">
+    Next
+  </button>
+</form>
+
+
+
+{% endblock %}

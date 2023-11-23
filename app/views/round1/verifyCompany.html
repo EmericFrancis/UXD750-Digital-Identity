@@ -1,0 +1,61 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Digital Idenity Verification" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-two-thirds govuk-!-margin-bottom-4">
+    
+    <h1 class="govuk-heading-l">Verify your idenity</h1>
+
+    <h2 class="govuk-heading-m">Choose a company to verify you</h2>
+
+    <div class="govuk-hint">
+      You can choose any company - you don't need to be an existing customer.
+    </div>
+
+  </div>
+
+
+   <div class="govuk-grid-column-full companyGrid">
+
+    <div class="companyCard">
+      <img class="" src="/../public/images/experianLogo.png" alt="Experian Logo"/>
+      <form action="taskPause2">
+        <button class="govuk-button" data-module="govuk-button">
+          Choose Experian
+        </button>
+      </form>
+      <p class="govuk-body"><a class="govuk-link" href="#">About Experian</a></p>
+    </div>
+
+    <div class="companyCard">
+      <img class="" src="/../public/images/verizonLogo.svg" alt="Verizon Logo"/>
+      <form action="taskPause2">
+        <button class="govuk-button" data-module="govuk-button">
+          Choose Verizon
+        </button>
+      </form>
+      <p class="govuk-body"><a class="govuk-link" href="#">About Verizon</a></p>
+    </div>
+
+    <div class="companyCard">
+      <img class="" src="/../public/images/royalMailLogo.png" alt="Verizon Logo"/>
+      <form action="taskPause2">
+        <button class="govuk-button" data-module="govuk-button">
+          Choose Royal Mail
+        </button>
+      </form>
+      <p class="govuk-body"><a class="govuk-link" href="#">About Royal Mail</a></p>
+    </div>
+
+
+    </div>
+    
+
+
+</div>
+
+{% endblock %}

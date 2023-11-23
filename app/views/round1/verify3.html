@@ -1,0 +1,69 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Digital Idenity Verification" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-two-thirds">
+    
+    <h1 class="govuk-heading-l">Verify your idenity</h1>
+
+    <form method="post">
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-!-font-weight-bold">
+            Are you 19 or over?
+        </legend>
+        <div class="govuk-radios govuk-radios--inline govuk-radios--small" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="over19" name="over19" type="radio" value="yes">
+            <label class="govuk-label govuk-radios__label" for="over19">
+              Yes
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="over19-2" name="over19" type="radio" value="no">
+            <label class="govuk-label govuk-radios__label" for="over19-2">
+              No
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-!-font-weight-bold">
+            Have you moved to the UK in the last 12 months?
+        </legend>
+        <div class="govuk-radios govuk-radios--inline govuk-radios--small" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="twelveMonths" name="twelveMonths" type="radio" value="yes">
+            <label class="govuk-label govuk-radios__label" for="twelveMonths">
+              Yes
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="twelveMonths-2" name="twelveMonths" type="radio" value="no">
+            <label class="govuk-label govuk-radios__label" for="twelveMonths-2">
+              No
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+    <button class="govuk-button" data-module="govuk-button">
+      Next
+    </button>
+
+    </form>
+
+  </div>
+    
+
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,58 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Digital Idenity Verification" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-two-thirds">
+    
+    <h1 class="govuk-heading-l">Verify your idenity</h1>
+
+    <form action="verifyCompany" method="post">
+    
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-!-font-weight-bold">
+            What type of phone do you have access to?
+          </legend>
+          <div class="govuk-hint">
+            This will be used to send you a security code
+          </div>
+          <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="havePhone" name="havePhone" type="radio" value="mobile">
+              <label class="govuk-label govuk-radios__label" for="havePhone">
+                Mobile Phone
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="havePhone-2" name="havePhone" type="radio" value="landline">
+              <label class="govuk-label govuk-radios__label" for="havePhone-2">
+                Landline Phone
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="havePhone-3" name="havePhone" type="radio" value="none">
+              <label class="govuk-label govuk-radios__label" for="havePhone-3">
+                I do not have access to a phone
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+    <button class="govuk-button" data-module="govuk-button">
+      Next
+    </button>
+
+    </form>
+
+  </div>
+    
+
+
+</div>
+
+{% endblock %}

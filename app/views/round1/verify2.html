@@ -1,0 +1,42 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Digital Idenity Verification" %}
+
+{% block content %}
+
+<div class="govuk-grid-row bg-blue">
+
+  <div class="govuk-grid-column-two-thirds verify-container">
+    <div class="govuk-form-group">
+
+      <p class="govuk-body white">
+        A certified company will verify your idenity.
+      </p>
+
+      <div class="companyIcons govuk-!-margin-bottom-4">
+        <img class="" src="/../public/images/experianWhite.png" alt="Experian Logo"/>
+        <img class="" src="/../public/images/royalMailWhite.png" alt="Royal Mail Logo"/>
+        <img class="" src="/../public/images/verizonWhite.png" alt="Royal Mail Logo"/>
+      </div>
+
+      <p class="govuk-body white">
+        They've all met security standards set by the government
+      </p>
+
+      <form action="taskPause1">
+        <button class="govuk-button verifyButton govuk-button--inverse govuk-!-margin-bottom-0 govuk-body govuk-!-font-weight-bold" data-module="govuk-button">
+              Start
+        </button>
+      </form>
+
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-third  verifyLogoContatiner">
+    <img class="verifyLogo" src="/../public/images/verifyLogo.png" alt="Logo"/>
+    <p class="white govuk-body-l"><span class="govuk-!-font-weight-bold">GOV.UK</span> VERIFY</p>
+  </div>
+
+</div>
+
+{% endblock %}

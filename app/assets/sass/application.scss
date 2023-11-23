@@ -1,0 +1,243 @@
+//
+// For guidance on how to add CSS and SCSS see:
+// https://prototype-kit.service.gov.uk/docs/adding-css-javascript-and-images
+// 
+
+// Add extra styles here
+
+
+.bg-blue {
+    background-color: govuk-colour("blue");
+    margin: auto 0;
+}
+
+.bg-green {
+    background-color: govuk-colour("green");
+    margin: auto 0;
+}
+.white{
+    color: white !important;
+}
+
+.verifyLogoText {
+    max-height: 80px;
+}
+
+.verify-container {
+    min-height: 500px;
+    display: flex;    
+    align-items: center;
+    padding: 0px 0px 0 64px;
+}
+
+.verifyLogo {
+    max-width: 170px;
+    padding-bottom: 5px;
+}
+
+.verifyLogoContatiner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 500px;
+}
+
+.verifyButton {
+    width: 120px;
+}
+
+.bgGrey {
+    background-color: #f3f2f1;
+}
+
+.verifyRadio {
+    padding: 5px;
+    min-width: 100px;
+}
+
+//Company page
+
+.companyCard {
+    background-color: white;
+    box-shadow: 0 0 3px 0 grey;
+    padding: 15px;
+    border-radius: 3px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 0.5fr 0.5fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.companyCard img {
+    max-width: 60%;
+}
+
+.companyGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 24px;
+    row-gap: 24px;
+}
+
+//Unbranded Template
+
+.progressIndicator {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    border-bottom: 1px;
+    max-width: 960px;
+    margin: 0 auto;
+}
+.active {
+    border-bottom: 3px solid black;
+}
+
+.active p { 
+    font-weight: 600;
+    margin-bottom: govuk-spacing(2);
+    margin-top: govuk-spacing(2);
+    color: black;
+}
+
+.deactive {
+    border-bottom: 3px solid govuk-colour("light-grey");
+}
+
+.deactive p {
+    margin-bottom: govuk-spacing(2);
+    margin-top: govuk-spacing(2);
+    color: govuk-colour("mid-grey");
+}
+
+//IDP Header
+.globalLinks {
+    background-color: #eee;
+    height: 50px;
+}
+
+.globalLinksMain {
+    display: grid;
+    align-items: center;
+    justify-content: start;
+    height: 100%;
+}
+
+.globalNav {
+    font-size: 14px !important;
+    color: #575756 !important;
+}
+.idpHeader {
+    // background-color: govuk-colour("dark-blue");
+    border-bottom: 1px solid #d8d8d8;
+}
+
+.idpHeaderContainer {
+    max-width: 1700px;
+    margin: 0 auto;
+    padding: 0 15px 0 15px;
+}
+
+.idpHeaderMain {
+    height: 72px;
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 1fr 8fr 1fr;
+    align-items: center;
+}
+
+.verifyCertified {
+    justify-self: end;
+    max-height: 71px;
+}
+
+.experianLogo {
+    max-height: 40px;
+}
+
+.navLinks {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    align-content: flex-start;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navLinks li a {
+    color: #575756;
+    text-decoration: none;
+    font-size: 19px;
+}
+
+.navLinks li a:hover {
+    color: #21458E;
+    text-decoration: underline;
+    font-size: 19px;
+}
+
+//driving licecne image
+
+.drivingLicenceImg {
+    max-height: 240px;
+    margin-bottom: govuk-spacing(4)
+}
+
+.infoBox {
+    background-color: rgba(33, 69, 142, 0.2);
+    padding: govuk-spacing(3);
+    border-radius: 8px;
+    margin-bottom: govuk-spacing(6)
+}
+
+//loading spinner
+
+.lds-dual-ring {
+    width: 80px;
+    height: 64px;
+    margin: 0 auto;
+  }
+  .lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 6px solid #21458E;
+    border-color: #21458E transparent #21458E transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+  }
+  @keyframes lds-dual-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  //Verify Icons
+
+  .verifyIcons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 15px;
+  }
+
+  .verifyIcons img {
+    width: 40px;
+  }
+
+  //verify 2
+
+  .companyIcons {
+    display: flex;
+    flex-direction: row;
+    height: 56px;
+    column-gap: 15px;
+  }
