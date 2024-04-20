@@ -1,0 +1,119 @@
+{% extends "govuk-prototype-kit/layouts/unbranded.html" %}
+
+{% block pageTitle %}
+  Experian Identity Provider
+{% endblock %}
+
+{% block header %}
+  <div class="globalLinks">
+  <div class="idpHeader">
+      <div class="globalLinks">
+        <div class="idpHeaderContainer globalLinksMain">
+          <ul class="navLinks">
+            <li>
+              <a class="globalNav" href="#">Consumer</a>
+            </li>
+            <li>
+              <a class="globalNav" href="#">Small Business</a>
+            </li>
+            <li>
+              <a class="globalNav" href="#">Business</a>
+            </li>
+          <li>
+            <a class="globalNav" href="#">Data & Marketing</a>
+          </li>
+          <li>
+            <a class="globalNav" href="#">Your privacy</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="idpHeaderContainer idpHeaderMain">
+      <img class="experianLogo" src="/../public/images/experianLogo.png" alt="Logo"/>
+      <ul class="navLinks">
+          <li>
+            <a class="" href="#">Credit score & report</a>
+          </li>
+          <li>
+            <a class="" href="#">Compare credit offers</a>
+          </li>
+          <li>
+            <a class="" href="#">Identity theft</a>
+          </li>
+          <li>
+            <a class="" href="#">More</a>
+          </li>
+      </ul>
+      <img class="verifyCertified" src="/../public/images/verifyCertified.png" alt="Logo"/>
+    </div>
+
+  </div>
+
+    <div class="progressIndicator">
+      <div class="active"><p class="govuk-body-s">1. Create Profile</p></div>
+      <div class="active"><p class="govuk-body-s">2. Personal details</p></div>
+      <div class="active"><p class="govuk-body-s">3. Proof of identity</p></div>
+      <div class="active"><p class="govuk-body-s">4. Identity test</p></div>
+      <div class="deactive"><p class="govuk-body-s">5. Phone</p></div>
+    </div>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row bg-white border">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-form-group govuk-!-padding-top-6 govuk-!-padding-left-4">
+      <div class="idenityTestHeader govuk-!-margin-bottom-7">
+        <h1 class="govuk-heading-l govuk-!-margin-bottom-3">Your data</h1>
+        <div class="identityTestStepper">
+          <div class="identityTestStep stepActive"></div>
+          <div class="identityTestStep stepActive"></div>
+          <div class="identityTestStep stepActive"></div>
+        </div>
+      </div>
+      
+      <div class="identityTestStorageInfo">
+        <img class="storageIcon" src="/../public/images/storageIconOne.png" alt="Storage Icon"/>
+        <div>
+          <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-1">How we use your data</p>
+          <p class="govuk-body">We match the information you provide against official records to verify your identity.</p>
+        </div>
+      </div>
+
+      <div class="identityTestStorageInfo">
+        <img class="storageIcon" src="/../public/images/storageIconTwo.png" alt="Storage Icon"/>
+        <div>
+          <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-1">Where it’s stored</p>
+          <p class="govuk-body">All of our Verify service data is kept in America in a secure server facility. You can request its deletion at anytime.</p>
+        </div>
+      </div>
+
+      <div class="identityTestStorageInfo">
+        <img class="storageIcon" src="/../public/images/storageIconThree.png" alt="Storage Icon"/>
+        <div>
+          <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-1">We don't share it</p>
+          <p class="govuk-body">We don’t share your Verify service data with anyone else including our commercial partners and subsidiaries.</p>
+        </div>
+      </div>
+      
+      <div class="govuk-button-group">
+        <form action="idp4e">
+          <button class="govuk-button govuk-!-margin-top-4 govuk-!-font-weight-bold" data-module="govuk-button">
+            Next ➔
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="idpOneThird IDPBGBlue">
+    <img class="verifyLogo IDPLogo" src="/../public/images/experianWhite.png" alt="Logo"/>
+    <h2 class="govuk-heading-l white govuk-!-padding-left-3">Taking the<br> identity test</h2>
+    <img class="IDPOverlay" src="/../public/images/Overlay.png" alt="Logo"/>
+  </div>
+
+
+</div>
+
+{% endblock %}

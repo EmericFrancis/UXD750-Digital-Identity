@@ -1,0 +1,204 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Digital Identity Verification" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-two-thirds govuk-!-margin-bottom-4">
+    
+    <h1 class="govuk-heading-l">Verify your identity</h1>
+
+    <h2 class="govuk-heading-m">Choose a company to verify you</h2>
+
+    <div class="govuk-hint">
+      You can choose any company - you don't need to be an existing customer.
+    </div>
+
+  </div>
+
+
+  <div class="govuk-grid-column-full companyCardLayout">
+
+    <div class="companyCardContainer">
+
+      <div class="companyCardHeader">
+        <h3 class="govuk-heading-s govuk-!-margin-0">Royal Mail</h3>
+
+        <div class="companyCardRequirements">
+          <div class="">
+            <img class="companyCardIcon" src="/../public/images/IDicon.png" alt="Icon of an idenity document"/>
+            <p class="govuk-body-s govuk-!-margin-0">Passport Required</p>
+          </div>
+          <div class="">
+            <img class="companyCardIcon" src="/../public/images/mobilePhone.png" alt="Icon of a mobile phone"/>
+            <p class="govuk-body-s govuk-!-margin-0">Mobile required</p>
+          </div>
+          <div class="">
+            <img class="companyCardIcon" src="/../public/images/clockIcon.png" alt="Icon of a clock"/>
+            <p class="govuk-body-s govuk-!-margin-0">10 - 15 minuets</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="companyCardBody">
+        <div class="companyCardImage">        
+          <img class="" src="/../public/images/royalMailLogo.png" alt="Royal mail Logo"/>
+        </div>
+        <div>
+          <p class="govuk-heading-s govuk-!-margin-bottom-2">About</p>
+          <p class="govuk-body govuk-!-margin-0">The Royal Mail operates across the United Kingdom, ensuring timely and secure delivery of letters and packages. Operating at the forefront of postal services since its inception in 1516. Renowned for its reliable and comprehensive mail and parcel services.</p>
+        </div>
+        <div class="companyCardButton">
+          <form action="taskPause2">
+            <button class="govuk-button govuk-!-margin-0" data-module="govuk-button">
+              Choose Royal Mail
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="companyCardFooter">
+        <div class="companyCardDataContainer">
+          <div class="companyCardDataInfo">
+            <p class="govuk-body-s govuk-!-font-weight-bold darkGrey">Partnerships:</p>
+            <p class="govuk-body-s darkGrey">None</p>
+          </div>
+          <div class="companyCardDataInfo">
+            <p class="govuk-body-s govuk-!-font-weight-bold darkGrey">Data Storage:</p>
+            <p class="govuk-body-s darkGrey">24 Months, England</p>
+          </div>
+          <div class="companyCardDataInfo">
+            <p class="govuk-body-s govuk-!-font-weight-bold darkGrey">Data Breaches:</p>
+            <p class="govuk-body-s darkGrey">24th August 2021</p>
+          </div>
+        </div>
+        <p class="govuk-body-s govuk-!-margin-0"><a href="#" class="govuk-link">Find out more</a></p>
+      </div>
+
+    </div>
+
+    <div class="companyCardContainer">
+
+      <div class="companyCardHeader">
+        <h3 class="govuk-heading-s govuk-!-margin-0">Experian</h3>
+
+        <div class="companyCardRequirements">
+          <div class="">
+            <img class="companyCardIcon" src="/../public/images/IDicon.png" alt="Icon of an identity document"/>
+            <p class="govuk-body-s govuk-!-margin-0">Passport or Driving Licence</p>
+          </div>
+          <div class="">
+            <img class="companyCardIcon" src="/../public/images/mobilePhone.png" alt="Icon of a mobile phone"/>
+            <p class="govuk-body-s govuk-!-margin-0">Mobile or Landline</p>
+          </div>
+          <div class="">
+            <img class="companyCardIcon" src="/../public/images/clockIcon.png" alt="Icon of a clock"/>
+            <p class="govuk-body-s govuk-!-margin-0">5 - 10 minuets</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="companyCardBody">
+        <div class="companyCardImage">        
+          <img class="" src="/../public/images/experianLogo.png" alt="Experian Logo"/>
+        </div>
+        <div>
+          <p class="govuk-heading-s govuk-!-margin-bottom-2">About</p>
+          <p class="govuk-body govuk-!-margin-0">Experian is a global leader in consumer and business credit reporting and marketing services. Founded in 1980, the company has grown to become a pivotal resource in financial data analytics and decision-making tools, operating in over 37 countries.</p>
+        </div>
+        <div class="companyCardButton">
+          <form action="taskPause2">
+            <button class="govuk-button govuk-!-margin-0" data-module="govuk-button">
+              Choose Experian
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="companyCardFooter">
+        <div class="companyCardDataContainer">
+          <div class="companyCardDataInfo">
+            <p class="govuk-body-s govuk-!-font-weight-bold darkGrey">Partnerships:</p>
+            <p class="govuk-body-s darkGrey">None</p>
+          </div>
+          <div class="companyCardDataInfo">
+            <p class="govuk-body-s govuk-!-font-weight-bold darkGrey">Data Storage:</p>
+            <p class="govuk-body-s darkGrey">24 Months, United States</p>
+          </div>
+          <div class="companyCardDataInfo">
+            <p class="govuk-body-s govuk-!-font-weight-bold darkGrey">Data Breaches:</p>
+            <p class="govuk-body-s darkGrey">None</p>
+          </div>
+        </div>
+        <p class="govuk-body-s govuk-!-margin-0"><a href="#" class="govuk-link">Find out more</a></p>
+      </div>
+
+    </div>
+
+    <div class="companyCardContainer">
+
+      <div class="companyCardHeader">
+        <h3 class="govuk-heading-s govuk-!-margin-0">Verizon</h3>
+
+        <div class="companyCardRequirements">
+          <div class="">
+            <img class="companyCardIcon" src="/../public/images/IDicon.png" alt="Icon of an identity document"/>
+            <p class="govuk-body-s govuk-!-margin-0">Driving Licence Required</p>
+          </div>
+          <div class="">
+            <img class="companyCardIcon" src="/../public/images/mobilePhone.png" alt="Icon of a mobile phone"/>
+            <p class="govuk-body-s govuk-!-margin-0">Mobile required</p>
+          </div>
+          <div class="">
+            <img class="companyCardIcon" src="/../public/images/clockIcon.png" alt="Icon of a clock"/>
+            <p class="govuk-body-s govuk-!-margin-0">10 - 15 minuets</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="companyCardBody">
+        <div class="companyCardImage">        
+          <img class="" src="/../public/images/verizonLogo.svg" alt="Verizon Logo"/>
+        </div>
+        <div>
+          <p class="govuk-heading-s govuk-!-margin-bottom-2">About</p>
+          <p class="govuk-body govuk-!-margin-0">Verizon established in 2000, operates primarily in the United States. Verizon is a provider of telecommunications, information technology, and entertainment services. Known for its extensive wireless network and broadband services.</p>
+        </div>
+        <div class="companyCardButton">
+          <form action="taskPause2">
+            <button class="govuk-button govuk-!-margin-0" data-module="govuk-button">
+              Choose Verizon
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="companyCardFooter">
+        <div class="companyCardDataContainer">
+          <div class="companyCardDataInfo">
+            <p class="govuk-body-s govuk-!-font-weight-bold darkGrey">Partnerships:</p>
+            <p class="govuk-body-s darkGrey">A&T Mobile</p>
+          </div>
+          <div class="companyCardDataInfo">
+            <p class="govuk-body-s govuk-!-font-weight-bold darkGrey">Data Storage:</p>
+            <p class="govuk-body-s darkGrey">36 Months, United States</p>
+          </div>
+          <div class="companyCardDataInfo">
+            <p class="govuk-body-s govuk-!-font-weight-bold darkGrey">Data Breaches:</p>
+            <p class="govuk-body-s darkGrey">17th January 2022</p>
+          </div>
+        </div>
+        <p class="govuk-body-s govuk-!-margin-0"><a href="#" class="govuk-link">Find out more</a></p>
+      </div>
+
+    </div>
+
+  </div>
+    
+
+
+</div>
+
+{% endblock %}

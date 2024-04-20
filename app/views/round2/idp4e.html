@@ -1,0 +1,147 @@
+{% extends "govuk-prototype-kit/layouts/unbranded.html" %}
+
+{% block pageTitle %}
+  Experian Identity Provider
+{% endblock %}
+
+{% block header %}
+  <div class="globalLinks">
+  <div class="idpHeader">
+      <div class="globalLinks">
+        <div class="idpHeaderContainer globalLinksMain">
+          <ul class="navLinks">
+            <li>
+              <a class="globalNav" href="#">Consumer</a>
+            </li>
+            <li>
+              <a class="globalNav" href="#">Small Business</a>
+            </li>
+            <li>
+              <a class="globalNav" href="#">Business</a>
+            </li>
+          <li>
+            <a class="globalNav" href="#">Data & Marketing</a>
+          </li>
+          <li>
+            <a class="globalNav" href="#">Your privacy</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="idpHeaderContainer idpHeaderMain">
+      <img class="experianLogo" src="/../public/images/experianLogo.png" alt="Logo"/>
+      <ul class="navLinks">
+          <li>
+            <a class="" href="#">Credit score & report</a>
+          </li>
+          <li>
+            <a class="" href="#">Compare credit offers</a>
+          </li>
+          <li>
+            <a class="" href="#">Identity theft</a>
+          </li>
+          <li>
+            <a class="" href="#">More</a>
+          </li>
+      </ul>
+      <img class="verifyCertified" src="/../public/images/verifyCertified.png" alt="Logo"/>
+    </div>
+
+  </div>
+
+    <div class="progressIndicator">
+      <div class="active"><p class="govuk-body-s">1. Create Profile</p></div>
+      <div class="active"><p class="govuk-body-s">2. Personal details</p></div>
+      <div class="active"><p class="govuk-body-s">3. Proof of identity</p></div>
+      <div class="active"><p class="govuk-body-s">4. Identity test</p></div>
+      <div class="deactive"><p class="govuk-body-s">5. Phone</p></div>
+    </div>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row bg-white border">
+
+  <div class="govuk-grid-column-two-thirds idp4eContainer">
+
+      <div class="bg-white loadingSpinner  govuk-!-padding-top-6 govuk-!-padding-left-4">
+        <div class="govuk-form-group">
+          <h1 id="title" class="govuk-heading-m govuk-!-text-align-centre govuk-!-margin-bottom-1">Creating your unique test</h1>
+          <p id="subTitle" class="govuk-body govuk-!-text-align-centre">This may take a few moments</p>
+          <div class="loader govuk-!-margin-bottom-3"></div>
+          <p class="govuk-!-font-size-16 govuk-hint spinner-text govuk-!-text-align-centre" style="display: block !important;">Accessing the electoral register</p>
+          <p class="govuk-!-font-size-16 govuk-hint spinner-text govuk-!-text-align-centre">Accessing your credit record</p>
+          <p class="govuk-!-font-size-16 govuk-hint spinner-text govuk-!-text-align-centre">Generating unique questions</p>
+          <p class="govuk-!-font-size-16 govuk-hint spinner-text govuk-!-text-align-centre">Generating unique answers</p>
+        </div>
+      </div>
+
+      <div class="identityTestStart  govuk-!-padding-top-6 govuk-!-padding-left-4">
+        <p class="govuk-!-font-size-16">
+          By taking the identity test, you grant Experian temporary access to your credit record. Your credit score won't be affected.
+        </p>
+        
+        <div class="govuk-button-group">
+          <form action="idp5">
+            <button id="govuk-button" class="govuk-button govuk-!-margin-top-1 govuk-!-font-weight-bold" disabled data-module="govuk-button">
+              Start test ➔
+            </button>
+          </form>
+        </div>
+      </div>
+
+  </div>
+
+  <div class="idpOneThird IDPBGBlue">
+    <img class="verifyLogo IDPLogo" src="/../public/images/experianWhite.png" alt="Logo"/>
+    <h2 class="govuk-heading-l white govuk-!-padding-left-3">Taking the<br> identity test</h2>
+    <img class="IDPOverlay" src="/../public/images/Overlay.png" alt="Logo"/>
+  </div>
+
+
+</div>
+
+<script>
+
+document.addEventListener('DOMContentLoaded', function() {
+  const spinner = document.querySelector('.loader');
+  const paragraphs = document.querySelectorAll('.spinner-text');
+  // Check if tick already exists, if not create it
+  let tick = document.querySelector('.tick');
+  if (!tick) {
+    tick = document.createElement('div');
+    tick.classList.add('tick');
+    document.querySelector('.loadingSpinner').appendChild(tick); // Append tick to the loadingSpinner
+  }
+  
+  let currentParagraph = 0;
+  // paragraphs.forEach(p => p.style.display = 'none'); // Initially hide all paragraphs
+  spinner.classList.add('active'); // Start the spinner
+  
+  const intervalId = setInterval(() => {
+    paragraphs[currentParagraph].style.display = 'none'; // Hide the current paragraph
+    currentParagraph = (currentParagraph + 1) % paragraphs.length; // Move to the next paragraph
+    paragraphs[currentParagraph].style.display = 'block'; // Show the next paragraph
+  }, 2000); // Change every 2 seconds
+
+  setTimeout(() => {
+    var title = document.getElementById('title');
+    var subtitle = document.getElementById('subTitle');
+    clearInterval(intervalId); // Stop changing paragraphs
+    spinner.classList.remove('active'); // Hide spinner
+    paragraphs[currentParagraph].style.display = 'none'; // Hide the last paragraph
+    tick.style.display = 'block'; // Instead of adding 'active' class, directly show the tick
+    title.innerText = 'Identity test successfully created';
+    subTitle.innerText = '3 questions generated';
+    subTitle.classList.add('govuk-hint')
+    document.getElementById('govuk-button').disabled = false;
+    setTimeout (() => {
+      // window.location.href = 'idp5';
+    }, 2000)
+  }, 8050); // Total spinner time before showing tick
+});
+
+</script>
+
+{% endblock %}

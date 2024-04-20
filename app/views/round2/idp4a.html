@@ -1,0 +1,110 @@
+{% extends "govuk-prototype-kit/layouts/unbranded.html" %}
+
+{% block pageTitle %}
+  Experian Identity Provider
+{% endblock %}
+
+{% block header %}
+  <div class="globalLinks">
+  <div class="idpHeader">
+      <div class="globalLinks">
+        <div class="idpHeaderContainer globalLinksMain">
+          <ul class="navLinks">
+            <li>
+              <a class="globalNav" href="#">Consumer</a>
+            </li>
+            <li>
+              <a class="globalNav" href="#">Small Business</a>
+            </li>
+            <li>
+              <a class="globalNav" href="#">Business</a>
+            </li>
+          <li>
+            <a class="globalNav" href="#">Data & Marketing</a>
+          </li>
+          <li>
+            <a class="globalNav" href="#">Your privacy</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="idpHeaderContainer idpHeaderMain">
+      <img class="experianLogo" src="/../public/images/experianLogo.png" alt="Logo"/>
+      <ul class="navLinks">
+          <li>
+            <a class="" href="#">Credit score & report</a>
+          </li>
+          <li>
+            <a class="" href="#">Compare credit offers</a>
+          </li>
+          <li>
+            <a class="" href="#">Identity theft</a>
+          </li>
+          <li>
+            <a class="" href="#">More</a>
+          </li>
+      </ul>
+      <img class="verifyCertified" src="/../public/images/verifyCertified.png" alt="Logo"/>
+    </div>
+
+  </div>
+
+    <div class="progressIndicator">
+      <div class="active"><p class="govuk-body-s">1. Create Profile</p></div>
+      <div class="active"><p class="govuk-body-s">2. Personal details</p></div>
+      <div class="active"><p class="govuk-body-s">3. Proof of identity</p></div>
+      <div class="active"><p class="govuk-body-s">4. Identity test</p></div>
+      <div class="deactive"><p class="govuk-body-s">5. Phone</p></div>
+    </div>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row bg-white border">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-form-group govuk-!-padding-top-6 govuk-!-padding-left-4">
+      <div class="idenityTestHeader govuk-!-margin-bottom-6">
+        <h1 class="govuk-heading-l govuk-!-margin-bottom-3">How it works</h1>
+        <div class="identityTestStepper">
+          <div class="identityTestStep stepActive"></div>
+          <div class="identityTestStep"></div>
+          <div class="identityTestStep"></div>
+        </div>
+      </div>
+      <div class="govuk-warning-text govuk-!-margin-0 govuk-!-padding-right-2">
+        <span class="govuk-warning-text__icon identityTestInfoStep" aria-hidden="true">1</span>
+        <p class="govuk-warning-text__text govuk-!-margin-bottom-1">We generate a question</p>
+        <p class="govuk-!-padding-bottom-2 govuk-!-margin-0 govuk-body govuk-warning-text__text govuk-!-font-weight-regular">Questions only you should be able to answer are generated from your credit record and electoral register data.</p>
+      </div>
+      <div class="govuk-warning-text govuk-!-margin-0 govuk-!-padding-right-2">
+        <span class="govuk-warning-text__icon identityTestInfoStep" aria-hidden="true">2</span>
+        <p class="govuk-warning-text__text govuk-!-margin-bottom-1">You provide an answer</p>
+        <p class="govuk-!-padding-bottom-2 govuk-!-margin-0 govuk-body govuk-warning-text__text govuk-!-font-weight-regular">Answers are generated for you to select from. Some or all of them may be incorrect, you can always select ‘none of these’.</p>
+      </div>
+      <div class="govuk-warning-text govuk-!-margin-0 govuk-!-padding-right-2">
+        <span class="govuk-warning-text__icon identityTestInfoStep" aria-hidden="true">3</span>
+        <p class="govuk-warning-text__text govuk-!-margin-bottom-1">Only the outcome is stored</p>
+        <p class="govuk-!-padding-bottom-2 govuk-!-margin-0 govuk-body govuk-warning-text__text govuk-!-font-weight-regular">We don't store your questions or answers. We only store if you answered them correctly - verifying your identify.</p>
+      </div>
+      
+      <div class="govuk-button-group">
+        <form action="idp4b">
+          <button class="govuk-button govuk-!-margin-top-4 govuk-!-font-weight-bold" data-module="govuk-button">
+            Next ➔
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="idpOneThird IDPBGBlue">
+    <img class="verifyLogo IDPLogo" src="/../public/images/experianWhite.png" alt="Logo"/>
+    <h2 class="govuk-heading-l white govuk-!-padding-left-3">Taking the<br> identity test</h2>
+    <img class="IDPOverlay" src="/../public/images/Overlay.png" alt="Logo"/>
+  </div>
+
+
+</div>
+
+{% endblock %}

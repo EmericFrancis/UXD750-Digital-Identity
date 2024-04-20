@@ -1,7 +1,7 @@
 {% extends "govuk-prototype-kit/layouts/unbranded.html" %}
 
 {% block pageTitle %}
-  Experian Idenity Provider
+  Experian Identity Provider
 {% endblock %}
 
 {% block header %}
@@ -51,25 +51,46 @@
 
     <div class="progressIndicator">
       <div class="active"><p class="govuk-body-s">1. Create Profile</p></div>
-      <div class="active"><p class="govuk-body-s">2. Personal details</p></div>
-      <div class="active"><p class="govuk-body-s">3. Proof of idenity</p></div>
-      <div class="active"><p class="govuk-body-s">4. Idenity test</p></div>
-      <div class="active"><p class="govuk-body-s">5. Phone</p></div>
+      <div class="deactive"><p class="govuk-body-s">2. Personal details</p></div>
+      <div class="deactive"><p class="govuk-body-s">3. Proof of identity</p></div>
+      <div class="deactive"><p class="govuk-body-s">4. Identity test</p></div>
+      <div class="deactive"><p class="govuk-body-s">5. Phone</p></div>
     </div>
 
 {% endblock %}
 
 {% block content %}
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-l">Pause</h1>
+  <span class="govuk-caption-l">Verify your identity</span>
+  <h1 class="govuk-heading-l">Create an Experian account</h1>
 
-    <p class="govuk-body">The researcher will ask you some questions before you continue</p>
+  <form action="idp1" method="post">
+    <div class="govuk-form-group">
+      <label class="govuk-label govuk-!-font-size-24 govuk-!-font-weight-bold govuk-!-margin-bottom-3" for="email">
+        Your email address
+      </label>
+      <input class="govuk-input govuk-input--width-20" id="email" name="email" type="text">
+    </div>
 
-    <p class="govuk-body"><a href="verify6" class="govuk-link">Continue</a></p>
+    <h2 class="govuk-heading-m">Create your password</h2>
+    <p class="govuk-body govuk-!-margin-bottom-1">You password must have:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>at least 8 characters</li>
+      <li>at least one symbol (eg !£&)</li>
+      <li>at least one capital letter</li>
+    </ul>
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="password">
+        Enter a password
+      </label>
+      <input class="govuk-input govuk-input--width-20" id="password" name="password" type="password">
+    </div>
 
-  </div>
-</div>
+    <button class="govuk-button" data-module="govuk-button">
+      Next
+    </button>
+  </form>
+
+
 
 {% endblock %}

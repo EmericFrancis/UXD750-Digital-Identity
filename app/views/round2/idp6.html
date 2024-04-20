@@ -1,7 +1,7 @@
 {% extends "govuk-prototype-kit/layouts/unbranded.html" %}
 
 {% block pageTitle %}
-  Experian Idenity Provider
+  Experian Identity Provider
 {% endblock %}
 
 {% block header %}
@@ -38,7 +38,7 @@
             <a class="" href="#">Compare credit offers</a>
           </li>
           <li>
-            <a class="" href="#">Idenity theft</a>
+            <a class="" href="#">Identity theft</a>
           </li>
           <li>
             <a class="" href="#">More</a>
@@ -52,8 +52,8 @@
     <div class="progressIndicator">
       <div class="active"><p class="govuk-body-s">1. Create Profile</p></div>
       <div class="active"><p class="govuk-body-s">2. Personal details</p></div>
-      <div class="active"><p class="govuk-body-s">3. Proof of idenity</p></div>
-      <div class="active"><p class="govuk-body-s">4. Idenity test</p></div>
+      <div class="active"><p class="govuk-body-s">3. Proof of identity</p></div>
+      <div class="active"><p class="govuk-body-s">4. Identity test</p></div>
       <div class="deactive"><p class="govuk-body-s">5. Phone</p></div>
     </div>
 
@@ -63,9 +63,9 @@
 
   <div class="govuk-grid-column-two-thirds govuk-!-padding-left-0">
 
-  <span class="govuk-caption-l">Idenity test</span>
+  <span class="govuk-caption-l">Identity test</span>
   <h1 class="govuk-heading-l">
-    Proof of idenity
+    Proof of identity
   </h1>
 
   <form action="idp7" method="post">
@@ -117,9 +117,35 @@
               Monzo
             </label>
           </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="bank-8" name="bank" type="radio" value="bank">
+            <label class="govuk-label govuk-radios__label" for="bank-8">
+              None of these
+            </label>
+          </div>
         </div>
       </fieldset>
     </div>
+
+    <details class="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          More information about this question
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+
+        <h3 class="govuk-heading-s govuk-!-margin-bottom-2">What is a credit limit?</h3>
+        <p class="govuk-body">A debit card is a payment card that deducts money directly from your bank account to pay for purchases, unlike a credit card, which borrows money you must repay later.</p>
+      
+        <h3 class="govuk-heading-s govuk-!-margin-bottom-2">How we know this?</h3>
+        <p class="govuk-body">As an approved GOV.UK Verify identity provider, we can access your credit records under specific legal conditions to allows us to perform identity verification and credit checking. We are regularly audited to ensure the data is used in compliance with regulations.</p>
+      
+        <h3 class="govuk-heading-s govuk-!-margin-bottom-2">Why we need to know this?</h3>
+        <div class="govuk-body">We need to access and ask questions based on private data (typically financial history, electoral register or utility company data) that isn't publicly accessible so that people pretending to be you are unlikely to be able to answer the questions correctly. This is how we ensure that the person interacting with the service is who they claim to be to verify their identity digitally.</div>
+      
+      </div>
+    </details>
 
     <button class="govuk-button" data-module="govuk-button">
       Next

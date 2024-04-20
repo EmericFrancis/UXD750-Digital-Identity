@@ -1,0 +1,394 @@
+{% extends "govuk-prototype-kit/layouts/unbranded.html" %}
+
+{% block pageTitle %}
+  Experian Identity Provider
+{% endblock %}
+
+{% block header %}
+  <div class="globalLinks">
+  <div class="idpHeader">
+      <div class="globalLinks">
+        <div class="idpHeaderContainer globalLinksMain">
+          <ul class="navLinks">
+            <li>
+              <a class="globalNav" href="#">Consumer</a>
+            </li>
+            <li>
+              <a class="globalNav" href="#">Small Business</a>
+            </li>
+            <li>
+              <a class="globalNav" href="#">Business</a>
+            </li>
+          <li>
+            <a class="globalNav" href="#">Data & Marketing</a>
+          </li>
+          <li>
+            <a class="globalNav" href="#">Your privacy</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="idpHeaderContainer idpHeaderMain">
+      <img class="experianLogo" src="/../public/images/experianLogo.png" alt="Logo"/>
+      <ul class="navLinks">
+          <li>
+            <a class="" href="#">Credit score & report</a>
+          </li>
+          <li>
+            <a class="" href="#">Compare credit offers</a>
+          </li>
+          <li>
+            <a class="" href="#">Identity theft</a>
+          </li>
+          <li>
+            <a class="" href="#">More</a>
+          </li>
+      </ul>
+      <img class="verifyCertified" src="/../public/images/verifyCertified.png" alt="Logo"/>
+    </div>
+
+  </div>
+
+    <div class="progressIndicator">
+      <div class="active"><p class="govuk-body-s">1. Create Profile</p></div>
+      <div class="active"><p class="govuk-body-s">2. Personal details</p></div>
+      <div class="active"><p class="govuk-body-s">3. Proof of identity</p></div>
+      <div class="deactive"><p class="govuk-body-s">4. Identity test</p></div>
+      <div class="deactive"><p class="govuk-body-s">5. Create Profile</p></div>
+    </div>
+
+{% endblock %}
+
+{% block content %}
+  
+  <div class="govuk-grid-column-one-half">
+  <span class="govuk-caption-l">Proof of identity</span>
+  <h1 class="govuk-heading-l">
+    Driving licence details
+  </h1>
+
+  <form id="drivingLicenceForm" action="taskPause3" method="post">
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" role="group" aria-describedby="issue-hint">
+        <legend class="govuk-fieldset__legend govuk-!-font-weight-bold">
+          Issue date
+        </legend>
+        <div id="issue-hint" class="govuk-hint">
+          Section 4a on your driving licence
+        </div>
+        <div class="govuk-date-input" id="issue">
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="issue-day">
+                Day
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="issue-day" name="issue-day" type="text" inputmode="numeric">
+            </div>
+          </div>
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="issue-month">
+                Month
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="issue-month" name="issue-month" type="text" inputmode="numeric">
+            </div>
+          </div>
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="issue-year">
+                Year
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="issue-year" name="issue-year" type="text" inputmode="numeric">
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" role="group" aria-describedby="expiry-hint">
+        <legend class="govuk-fieldset__legend govuk-!-font-weight-bold">
+          Expiry date
+        </legend>
+        <div id="expiry-hint" class="govuk-hint">
+          Section 4b on your driving licence
+        </div>
+        <div class="govuk-date-input" id="expiry">
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="expiry-day">
+                Day
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="expiry-day" name="expiry-day" type="text" inputmode="numeric">
+            </div>
+          </div>
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="expiry-month">
+                Month
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="expiry-month" name="expiry-month" type="text" inputmode="numeric">
+            </div>
+          </div>
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="expiry-year">
+                Year
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="expiry-year" name="expiry-year" type="text" inputmode="numeric">
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+    <div id="drivingLicenceField" class="govuk-form-group">
+      <label class="govuk-label govuk-!-font-weight-bold" for="licence-number">
+        Licence number
+      </label>
+      <div id="licence-number-hint" class="govuk-hint">
+        Section 5 on your driving licence
+      </div>
+      <p id="drivingLicenceMessage" class="govuk-error-message govuk-!-display-none">
+        <span class="govuk-visually-hidden">Error:</span> Enter a valid UK driving licence number
+      </p>
+      <div class="inlineValidate">
+        <input class="govuk-input govuk-input--width-20" id="licence-number" name="licenceNumber" type="text" aria-describedby="licence-number-hint">
+        <img id="greenCheck" class="govuk-!-display-none govuk-!-margin-0" src="/../public/images/greenCheck.png" alt="Green check icon"/>
+        <div id="checkingBlock" class="checkingBlock govuk-!-display-none">
+          <div id="spinner" class="spinner"></div>
+          <div class="govuk-!-font-size-16 govuk-hint govuk-!-margin-0">Checking...</div>
+        </div>
+      </div>
+    </div>
+    <div id="issueNumberField" class="govuk-form-group">
+      <label class="govuk-label govuk-!-font-weight-bold" for="issue-number">
+        Issue number
+      </label>
+      <div id="issue-number-hint" class="govuk-hint">
+        The 2 digits after your licence number
+      </div>
+      <p id="issueNumberMessage" class="govuk-error-message govuk-!-display-none">
+        <span class="govuk-visually-hidden">Error:</span> Enter a valid issue number
+      </p>
+      <div class="inlineValidate">
+        <input class="govuk-input govuk-input--width-4" id="issue-number" name="issueNumber" type="text" aria-describedby="issue-number-hint">
+        <img id="greenCheck2" class="govuk-!-display-none govuk-!-margin-0" src="/../public/images/greenCheck.png" alt="Green check icon"/>
+        <div id="checkingBlock2" class="checkingBlock govuk-!-display-none">
+          <div id="spinner" class="spinner"></div>
+          <div class="govuk-!-font-size-16 govuk-hint govuk-!-margin-0">Checking...</div>
+        </div>
+      </div>
+    </div>
+
+  <button class="govuk-button" data-module="govuk-button">
+    Next
+  </button>
+</form>
+</div>
+
+<div class="govuk-grid-column-one-half govuk-!-padding-0">
+
+  <div class="documentHelper">
+    <div class="documentHelperHeader" onclick="toggle()">
+      <p class="govuk-body-s govuk-!-margin-0">Need help finding the information?</p>
+      <div class="documentHelperAccordion">
+        <span id="accordionChevron" class="accordionChevron"></span>
+        <p id="accordionLabel" class="govuk-body-s govuk-!-margin-0">Hide</p>
+      </div>
+    </div>
+
+    <div id="documentHelperImage" class="documentHelperImage">
+      <img id="overlay1" class="drivingLicenceImg govuk-!-margin-0 documentOverlay govuk-!-display-none" src="/../public/images/4aOverlay.png" alt="Driving Licence"/>
+      <img id="overlay2" class="drivingLicenceImg govuk-!-margin-0 documentOverlay govuk-!-display-none" src="/../public/images/4bOverlay.png" alt="Driving Licence"/>
+      <img id="overlay3" class="drivingLicenceImg govuk-!-margin-0 documentOverlay govuk-!-display-none" src="/../public/images/5aOverlay.png" alt="Driving Licence"/>
+      <img id="overlay4" class="drivingLicenceImg govuk-!-margin-0 documentOverlay govuk-!-display-none" src="/../public/images/5bOverlay.png" alt="Driving Licence"/>
+      <img class="drivingLicenceImg govuk-!-margin-0" src="/../public/images/drivinglicence.png" alt="Driving Licence"/>
+    </div>
+
+    <div id="documentHelperTable" class="documentHelperTable">
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header govuk-!-font-size-16">Information</th>
+            <th scope="col" class="govuk-table__header govuk-!-text-align-right govuk-!-font-size-16">Action</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row documentRow">
+            <th scope="row" class="govuk-table__header govuk-!-font-weight-regular govuk-!-font-size-16">1. Issue date</th>
+            <td class="govuk-table__cell documentHelperShow govuk-!-text-align-right">
+              <p class="govuk-body-s govuk-!-margin-0">Show</p>
+              <img class="eyeIcon govuk-!-margin-0" src="/../public/images/visibleEyeIcon.svg" alt="Eye icon"/>
+            </td>
+          </tr>
+          <tr class="govuk-table__row documentRow">
+            <th scope="row" class="govuk-table__header govuk-!-font-weight-regular govuk-!-font-size-16">2. Expiry date</th>
+            <td class="govuk-table__cell documentHelperShow govuk-!-text-align-right">
+              <p class="govuk-body-s govuk-!-margin-0">Show</p>
+              <img class="eyeIcon govuk-!-margin-0" src="/../public/images/visibleEyeIcon.svg" alt="Eye icon"/>
+            </td>
+          </tr>
+          <tr class="govuk-table__row documentRow">
+            <th scope="row" class="govuk-table__header govuk-!-font-weight-regular govuk-!-font-size-16">3. Licence number</th>
+            <td class="govuk-table__cell documentHelperShow govuk-!-text-align-right">
+              <p class="govuk-body-s govuk-!-margin-0">Show</p>
+              <img class="eyeIcon govuk-!-margin-0" src="/../public/images/visibleEyeIcon.svg" alt="Eye icon"/>
+            </td>
+          </tr>
+          <tr class="govuk-table__row documentRow">
+            <th scope="row" class="govuk-table__header govuk-!-font-weight-regular govuk-!-font-size-16">4. Issue number</th>
+            <td class="govuk-table__cell documentHelperShow govuk-!-text-align-right">
+              <p class="govuk-body-s govuk-!-margin-0">Show</p>
+              <img class="eyeIcon govuk-!-margin-0" src="/../public/images/visibleEyeIcon.svg" alt="Eye icon"/>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</div>
+
+<script>
+
+//driving licence number
+
+let input = document.getElementById('licence-number');
+let greenCheck = document.getElementById('greenCheck');
+let spinner = document.getElementById('spinner'); // Reference to the spinner
+let checkingBlock = document.getElementById('checkingBlock'); // Reference to the spinner
+let drivingLicenceField = document.getElementById('drivingLicenceField');
+let drivingLicenceMessage = document.getElementById('drivingLicenceMessage');
+
+input.onblur = function() {
+  // Initial state: hide green check, show spinner
+  greenCheck.classList.add("govuk-!-display-none");
+  checkingBlock.classList.remove("govuk-!-display-none"); // Show spinner
+
+  setTimeout(function() {
+    var regEx = /^[A-Z9]{5}\d[0156]\d([0][1-9]|[12]\d|3[01])\d[A-Z9]{2}\d[A-Z]{2}$/i;
+    checkingBlock.classList.add("govuk-!-display-none"); // Hide spinner after checking
+
+    if (input.value == '') {
+      input.classList.remove("govuk-input--error");
+      drivingLicenceField.classList.remove("govuk-form-group--error");
+      drivingLicenceMessage.classList.add("govuk-!-display-none");
+    } else if(regEx.test(input.value)) {
+      greenCheck.classList.remove("govuk-!-display-none"); // Show green check if valid
+      input.classList.remove("govuk-input--error");
+      drivingLicenceField.classList.remove("govuk-form-group--error");
+      drivingLicenceMessage.classList.add("govuk-!-display-none");
+    } else {
+      input.classList.add("govuk-input--error");
+      drivingLicenceField.classList.add("govuk-form-group--error");
+      drivingLicenceMessage.classList.remove("govuk-!-display-none");
+    }
+  }, 2500); // 3-second delay for the demo
+};
+
+//issue number
+
+let issueNumber = document.getElementById('issue-number')
+let greenCheck2 = document.getElementById('greenCheck2')
+let checkingBlock2 = document.getElementById('checkingBlock2')
+let issueNumberField = document.getElementById('issueNumberField')
+let issueNumberMessage = document.getElementById('issueNumberMessage')
+
+issueNumber.onblur = function() {
+  greenCheck2.classList.add("govuk-!-display-none");
+  checkingBlock2.classList.remove("govuk-!-display-none"); // Show spinner
+
+  setTimeout(function () {
+    var regEx = /^[0-9]{2}$/
+    checkingBlock2.classList.add("govuk-!-display-none"); // Hide spinner after checking
+
+    if (issueNumber.value == '') {
+      greenCheck2.classList.add("govuk-!-display-none")
+      issueNumber.classList.remove("govuk-input--error")
+      issueNumberField.classList.remove("govuk-form-group--error")
+      issueNumberMessage.classList.add("govuk-!-display-none")
+    } else if(regEx.test(issueNumber.value)) {
+      greenCheck2.classList.remove("govuk-!-display-none")
+      issueNumber.classList.remove("govuk-input--error")
+      issueNumberField.classList.remove("govuk-form-group--error")
+      issueNumberMessage.classList.add("govuk-!-display-none")
+    } else {
+      greenCheck2.classList.add("govuk-!-display-none")
+      issueNumber.classList.add("govuk-input--error")
+      issueNumberField.classList.add("govuk-form-group--error")
+      issueNumberMessage.classList.remove("govuk-!-display-none")
+    }
+  }, 1500)
+};
+
+// !! DOCUMENT HELPER !! //
+
+//Accordion hide show element
+
+let documentHelperImage = document.getElementById('documentHelperImage');
+let documentHelperTable = document.getElementById('documentHelperTable');
+
+  function toggle() {
+    documentHelperTable.classList.toggle('govuk-!-display-none');
+    documentHelperImage.classList.toggle('govuk-!-display-none');
+    if (accordionLabel.innerText == 'Show') {
+      accordionLabel.innerText = "Hide";
+      accordionChevron.style.transform = "rotate(0deg)"
+    } else {
+      accordionLabel.innerText = "Show";
+      accordionChevron.style.transform = "rotate(180deg)"
+    }
+  }
+
+//toggle information to show
+
+var acc = document.getElementsByClassName("documentRow");
+var i;
+
+// Function to hide all overlays and reset labels/icons for all rows
+function hideAllOverlays() {
+  for (let j = 1; j <= 4; j++) {
+    let overlay = document.getElementById('overlay' + j);
+    let row = document.getElementsByClassName("documentRow")[j - 1]; // Assuming direct mapping
+    let label = row.getElementsByClassName("govuk-body-s")[0];
+    let icon = row.getElementsByClassName("eyeIcon")[0];
+
+    if (overlay) {
+      overlay.classList.add('govuk-!-display-none');
+    }
+    // Reset text and icons for all rows
+    label.innerText = "Show";
+    icon.src = "/../public/images/visibleEyeIcon.svg";
+    icon.classList.remove("disableEyeIcon"); // Assuming you have a class to indicate disabled state
+  }
+}
+
+// Click event listener for each document row to manage overlay visibility and deactivation
+for (let i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    let overlayId = 'overlay' + (i + 1); // Construct the corresponding overlay ID
+    let overlayImage = document.getElementById(overlayId);
+    let isActive = !overlayImage.classList.contains('govuk-!-display-none');
+
+    // Hide all overlays and reset labels/icons before possibly re-activating the clicked one
+    hideAllOverlays();
+
+    // Toggle the clicked overlay only if it was not already active
+    if (!isActive) {
+      overlayImage.classList.remove('govuk-!-display-none');
+      let label = this.getElementsByClassName("govuk-body-s")[0];
+      let icon = this.getElementsByClassName("eyeIcon")[0];
+
+      // Overlay is now visible
+      label.innerText = "Hide";
+      icon.src = "/../public/images/disableEyeIcon.svg";
+      icon.classList.add("disableEyeIcon");
+    }
+    // If the overlay was already active, it has been hidden by hideAllOverlays(),
+    // and we leave the label and icon in their reset state ("Show", visibleEyeIcon).
+  });
+}
+
+</script>
+
+{% endblock %}

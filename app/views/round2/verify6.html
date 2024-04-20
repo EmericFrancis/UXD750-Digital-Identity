@@ -1,0 +1,32 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Digital Identity Verification" %}
+
+{% block content %}
+
+<div class="govuk-grid-row bg-green">
+
+  <div class="govuk-grid-column-two-thirds verify-container">
+    <div class="govuk-form-group">
+
+      <h1 class="govuk-heading-s white">
+        You can now access GOV.UK services with your Experian account
+      </h1>
+
+      <p class="govuk-body govuk-!-font-weight-bold white">
+        You won't have to verify your identity again.
+      </p>
+
+      <p class="govuk-body white"><a href="#" class="white">Renew or update your driving licence</a></p>
+
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-third  verifyLogoContatiner">
+    <img class="verifyLogo" src="/../public/images/verifyLogo.png" alt="Logo"/>
+    <p class="white govuk-body-l"><span class="govuk-!-font-weight-bold">GOV.UK</span> VERIFY</p>
+  </div>
+
+</div>
+
+{% endblock %}

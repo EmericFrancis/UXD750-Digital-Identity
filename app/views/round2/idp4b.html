@@ -1,0 +1,106 @@
+{% extends "govuk-prototype-kit/layouts/unbranded.html" %}
+
+{% block pageTitle %}
+  Experian Identity Provider
+{% endblock %}
+
+{% block header %}
+  <div class="globalLinks">
+  <div class="idpHeader">
+      <div class="globalLinks">
+        <div class="idpHeaderContainer globalLinksMain">
+          <ul class="navLinks">
+            <li>
+              <a class="globalNav" href="#">Consumer</a>
+            </li>
+            <li>
+              <a class="globalNav" href="#">Small Business</a>
+            </li>
+            <li>
+              <a class="globalNav" href="#">Business</a>
+            </li>
+          <li>
+            <a class="globalNav" href="#">Data & Marketing</a>
+          </li>
+          <li>
+            <a class="globalNav" href="#">Your privacy</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="idpHeaderContainer idpHeaderMain">
+      <img class="experianLogo" src="/../public/images/experianLogo.png" alt="Logo"/>
+      <ul class="navLinks">
+          <li>
+            <a class="" href="#">Credit score & report</a>
+          </li>
+          <li>
+            <a class="" href="#">Compare credit offers</a>
+          </li>
+          <li>
+            <a class="" href="#">Identity theft</a>
+          </li>
+          <li>
+            <a class="" href="#">More</a>
+          </li>
+      </ul>
+      <img class="verifyCertified" src="/../public/images/verifyCertified.png" alt="Logo"/>
+    </div>
+
+  </div>
+
+    <div class="progressIndicator">
+      <div class="active"><p class="govuk-body-s">1. Create Profile</p></div>
+      <div class="active"><p class="govuk-body-s">2. Personal details</p></div>
+      <div class="active"><p class="govuk-body-s">3. Proof of identity</p></div>
+      <div class="active"><p class="govuk-body-s">4. Identity test</p></div>
+      <div class="deactive"><p class="govuk-body-s">5. Phone</p></div>
+    </div>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row bg-white border">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-form-group govuk-!-padding-top-6 govuk-!-padding-left-4">
+      <div class="idenityTestHeader govuk-!-margin-bottom-7">
+        <h1 class="govuk-heading-l govuk-!-margin-bottom-3">Example question</h1>
+        <div class="identityTestStepper">
+          <div class="identityTestStep stepActive"></div>
+          <div class="identityTestStep stepActive"></div>
+          <div class="identityTestStep"></div>
+        </div>
+      </div>
+      
+      <div class="identityTestQuote govuk-!-margin-right-3 govuk-!-margin-bottom-5">
+        <img class="identityTestQuoteMarks" src="/../public/images/quotes.png" alt="Logo"/>
+        <h2 class="govuk-body govuk-!-font-weight-bold govuk-!-padding-top-3">According to your records, you have a credit card. Which company provides this card?</h2>
+        <img class="identityTestQuoteMarks identityTestQuoteMarksRight" src="/../public/images/quotes.png" alt="Logo"/>
+      </div>
+
+      <div>
+        <h3 class="govuk-body-s govuk-!-font-weight-bold">Answering the question</h3>
+        <p class="govuk-body-s">A list of automatically generated answers will be available below the question for you to select from.  If you cannot see an answer you think is correct select the ‘none of these’ option. More information is available about each question by clicking on the ‘About this question’ link after the answers section.</p>
+      </div>
+      
+      <div class="govuk-button-group">
+        <form action="idp4c">
+          <button class="govuk-button govuk-!-margin-top-4 govuk-!-font-weight-bold" data-module="govuk-button">
+            Next ➔
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="idpOneThird IDPBGBlue">
+    <img class="verifyLogo IDPLogo" src="/../public/images/experianWhite.png" alt="Logo"/>
+    <h2 class="govuk-heading-l white govuk-!-padding-left-3">Taking the<br> identity test</h2>
+    <img class="IDPOverlay" src="/../public/images/Overlay.png" alt="Logo"/>
+  </div>
+
+
+</div>
+
+{% endblock %}

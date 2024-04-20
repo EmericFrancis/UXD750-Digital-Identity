@@ -6,6 +6,8 @@
 const govukPrototypeKit = require('govuk-prototype-kit')
 const router = govukPrototypeKit.requests.setupRouter()
 
+//!! ROUND 1 ROUTING !!
+
 // Add your routes here
 
 //verify3 Routing
@@ -31,6 +33,39 @@ router.post('/round1/idp2', function (req, res) {
   })
 
 router.post('/round1/idp3', function (req, res) {
+
+    if (req.session.data['idDoc'] == "driving"){
+        res.redirect('idpDriving') 
+      } else {
+        res.redirect('idpPassport')
+      }
+  })
+
+//!! ROUND 2 ROUTING !!
+
+//verify3 Routing
+router.post('/round2/verify3', function (req, res) {
+
+  if (req.session.data['over19'] == "no"){
+      res.redirect('notEligible') 
+    } else if (req.session.data['twelveMonths'] == "yes") {
+      res.redirect('notEligible')
+    } else {
+      res.redirect('verify4')
+    }
+})
+
+//idp3 Routing
+
+router.post('/round2/idp1', function (req, res) {
+  res.redirect('idp2')
+})
+
+router.post('/round2/idp2', function (req, res) {
+        res.redirect('idp3')
+  })
+
+router.post('/round2/idp3', function (req, res) {
 
     if (req.session.data['idDoc'] == "driving"){
         res.redirect('idpDriving') 

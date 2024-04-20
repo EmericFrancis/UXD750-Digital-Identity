@@ -1,7 +1,7 @@
 {% extends "govuk-prototype-kit/layouts/unbranded.html" %}
 
 {% block pageTitle %}
-  Experian Idenity Provider
+  Experian Identity Provider
 {% endblock %}
 
 {% block header %}
@@ -38,7 +38,7 @@
             <a class="" href="#">Compare credit offers</a>
           </li>
           <li>
-            <a class="" href="#">Idenity theft</a>
+            <a class="" href="#">Identity theft</a>
           </li>
           <li>
             <a class="" href="#">More</a>
@@ -52,8 +52,8 @@
     <div class="progressIndicator">
       <div class="active"><p class="govuk-body-s">1. Create Profile</p></div>
       <div class="active"><p class="govuk-body-s">2. Personal details</p></div>
-      <div class="active"><p class="govuk-body-s">3. Proof of idenity</p></div>
-      <div class="active"><p class="govuk-body-s">4. Idenity test</p></div>
+      <div class="active"><p class="govuk-body-s">3. Proof of identity</p></div>
+      <div class="active"><p class="govuk-body-s">4. Identity test</p></div>
       <div class="active"><p class="govuk-body-s">5. Phone</p></div>
     </div>
 
@@ -61,15 +61,35 @@
 
 {% block content %}
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-l">Pause</h1>
+<div class="govuk-grid-column-two-thirds govuk-!-padding-left-0">
 
-    <p class="govuk-body">The researcher will ask you some questions before you continue</p>
+  <h1 class="govuk-heading-l">
+    Account Security
+  </h1>
 
-    <p class="govuk-body"><a href="verify6" class="govuk-link">Continue</a></p>
-
+  <div class="infoBox">
+    <h2 class="govuk-heading-m govuk-!-font-weight-regular govuk-!-margin-bottom-2">When you sign in to GOV.UK using Experian</h2>
+    <p class="govuk-body-s govuk-!-margin-bottom-">You'll need to enter a unique security code that will be sent to your mobile phone.</p>
+    <p class="govuk-body-s govuk-!-margin-bottom-">A new security code will be sent every time.</p>
   </div>
+
+  <form action="idp9" method="post">
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="phoneNumber">
+        Phone number
+      </label>
+      <input class="govuk-input govuk-input--width-20" id="phoneNumber" name="phoneNumber" type="number">
+    </div>
+
+    <button class="govuk-button" data-module="govuk-button">
+      Send code
+    </button>
+
+  </form>
+
 </div>
+
+
 
 {% endblock %}

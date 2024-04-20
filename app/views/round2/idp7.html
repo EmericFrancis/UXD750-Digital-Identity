@@ -1,0 +1,146 @@
+{% extends "govuk-prototype-kit/layouts/unbranded.html" %}
+
+{% block pageTitle %}
+  Experian Identity Provider
+{% endblock %}
+
+{% block header %}
+  <div class="globalLinks">
+  <div class="idpHeader">
+      <div class="globalLinks">
+        <div class="idpHeaderContainer globalLinksMain">
+          <ul class="navLinks">
+            <li>
+              <a class="globalNav" href="#">Consumer</a>
+            </li>
+            <li>
+              <a class="globalNav" href="#">Small Business</a>
+            </li>
+            <li>
+              <a class="globalNav" href="#">Business</a>
+            </li>
+          <li>
+            <a class="globalNav" href="#">Data & Marketing</a>
+          </li>
+          <li>
+            <a class="globalNav" href="#">Your privacy</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="idpHeaderContainer idpHeaderMain">
+      <img class="experianLogo" src="/../public/images/experianLogo.png" alt="Logo"/>
+      <ul class="navLinks">
+          <li>
+            <a class="" href="#">Credit score & report</a>
+          </li>
+          <li>
+            <a class="" href="#">Compare credit offers</a>
+          </li>
+          <li>
+            <a class="" href="#">Identity theft</a>
+          </li>
+          <li>
+            <a class="" href="#">More</a>
+          </li>
+      </ul>
+      <img class="verifyCertified" src="/../public/images/verifyCertified.png" alt="Logo"/>
+    </div>
+
+  </div>
+
+    <div class="progressIndicator">
+      <div class="active"><p class="govuk-body-s">1. Create Profile</p></div>
+      <div class="active"><p class="govuk-body-s">2. Personal details</p></div>
+      <div class="active"><p class="govuk-body-s">3. Proof of identity</p></div>
+      <div class="active"><p class="govuk-body-s">4. Identity test</p></div>
+      <div class="deactive"><p class="govuk-body-s">5. Phone</p></div>
+    </div>
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-column-two-thirds govuk-!-padding-left-0">
+
+  <span class="govuk-caption-l">Identity test</span>
+  <h1 class="govuk-heading-l">
+    Proof of identity
+  </h1>
+
+  <form action="idp8" method="post">
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m govuk-!-font-weight-regular">
+          What is your overdraft on that card?
+        </legend>
+        <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="credit" name="credit" type="radio" value="500">
+            <label class="govuk-label govuk-radios__label" for="credit">
+              £500
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="credit-2" name="credit" type="radio" value="1000">
+            <label class="govuk-label govuk-radios__label" for="credit-2">
+              £1000
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="credit-3" name="credit" type="radio" value="1250">
+            <label class="govuk-label govuk-radios__label" for="credit-3">
+              £1250
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="credit-4" name="credit" type="radio" value="2000">
+            <label class="govuk-label govuk-radios__label" for="credit-4">
+              £2000
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="credit-5" name="bank" type="radio" value="4500">
+            <label class="govuk-label govuk-radios__label" for="credit-5">
+              £4500
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="credit-6" name="bank" type="radio" value="None of these">
+            <label class="govuk-label govuk-radios__label" for="credit-6">
+              None of these
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+    <details class="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          More information about this question
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+      
+        <h3 class="govuk-heading-s govuk-!-margin-bottom-2">What is a credit limit?</h3>
+        <p class="govuk-body">A credit limit is the maximum amount you can borrow on a credit card.</p>
+
+        <h3 class="govuk-heading-s govuk-!-margin-bottom-2">How we know this?</h3>
+        <p class="govuk-body">As an approved GOV.UK Verify identity provider, we can access your credit records under specific legal conditions to allows us to perform identity verification and credit checking. We are regularly audited to ensure the data is used in compliance with regulations.</p>
+      
+        <h3 class="govuk-heading-s govuk-!-margin-bottom-2">Why we need to know this?</h3>
+        <div class="govuk-body">We need to access and ask questions based on private data (typically financial history, electoral register or utility company data) that isn't publicly accessible so that people pretending to be you are unlikely to be able to answer the questions correctly. This is how we ensure that the person interacting with the service is who they claim to be to verify their identity digitally.</div>
+      
+      </div>
+    </details>
+
+    <button class="govuk-button" data-module="govuk-button">
+      Next
+    </button>
+  </form>
+</div>
+
+
+
+{% endblock %}

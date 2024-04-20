@@ -1,7 +1,7 @@
 {% extends "govuk-prototype-kit/layouts/unbranded.html" %}
 
 {% block pageTitle %}
-  Experian Idenity Provider
+  Experian Identity Provider
 {% endblock %}
 
 {% block header %}
@@ -38,7 +38,7 @@
             <a class="" href="#">Compare credit offers</a>
           </li>
           <li>
-            <a class="" href="#">Idenity theft</a>
+            <a class="" href="#">Identity theft</a>
           </li>
           <li>
             <a class="" href="#">More</a>
@@ -52,24 +52,48 @@
     <div class="progressIndicator">
       <div class="active"><p class="govuk-body-s">1. Create Profile</p></div>
       <div class="active"><p class="govuk-body-s">2. Personal details</p></div>
-      <div class="active"><p class="govuk-body-s">3. Proof of idenity</p></div>
-      <div class="active"><p class="govuk-body-s">4. Idenity test</p></div>
-      <div class="active"><p class="govuk-body-s">5. Phone</p></div>
+      <div class="active"><p class="govuk-body-s">3. Proof of identity</p></div>
+      <div class="deactive"><p class="govuk-body-s">4. Identity test</p></div>
+      <div class="deactive"><p class="govuk-body-s">5. Phone</p></div>
     </div>
 
 {% endblock %}
 
 {% block content %}
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-l">Pause</h1>
+  <h1 class="govuk-heading-l">
+    Proof of identity
+  </h1>
 
-    <p class="govuk-body">The researcher will ask you some questions before you continue</p>
+  <form method="post">
+  
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m govuk-!-font-weight-regular">
+            Which document would you like to use to verify your identity?
+        </legend>
+        <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="idDoc" name="idDoc" type="radio" value="driving">
+            <label class="govuk-label govuk-radios__label" for="idDoc">
+              UK Driving Licence
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="idDoc-2" name="idDoc" type="radio" value="passport">
+            <label class="govuk-label govuk-radios__label" for="idDoc-2">
+              UK Passport
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
 
-    <p class="govuk-body"><a href="verify6" class="govuk-link">Continue</a></p>
+  <button class="govuk-button" data-module="govuk-button">
+    Next
+  </button>
+</form>
 
-  </div>
-</div>
+
 
 {% endblock %}

@@ -1,7 +1,7 @@
 {% extends "govuk-prototype-kit/layouts/unbranded.html" %}
 
 {% block pageTitle %}
-  Experian Idenity Provider
+  Experian Identity Provider
 {% endblock %}
 
 {% block header %}
@@ -38,7 +38,7 @@
             <a class="" href="#">Compare credit offers</a>
           </li>
           <li>
-            <a class="" href="#">Idenity theft</a>
+            <a class="" href="#">Identity theft</a>
           </li>
           <li>
             <a class="" href="#">More</a>
@@ -52,24 +52,41 @@
     <div class="progressIndicator">
       <div class="active"><p class="govuk-body-s">1. Create Profile</p></div>
       <div class="active"><p class="govuk-body-s">2. Personal details</p></div>
-      <div class="active"><p class="govuk-body-s">3. Proof of idenity</p></div>
-      <div class="active"><p class="govuk-body-s">4. Idenity test</p></div>
-      <div class="active"><p class="govuk-body-s">5. Phone</p></div>
+      <div class="active"><p class="govuk-body-s">3. Proof of identity</p></div>
+      <div class="active"><p class="govuk-body-s">4. Identity test</p></div>
+      <div class="deactive"><p class="govuk-body-s">5. Phone</p></div>
     </div>
 
 {% endblock %}
 
 {% block content %}
 
-<div class="govuk-grid-row">
+<div class="govuk-grid-row IDPBGBlue border">
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-l">Pause</h1>
-
-    <p class="govuk-body">The researcher will ask you some questions before you continue</p>
-
-    <p class="govuk-body"><a href="verify6" class="govuk-link">Continue</a></p>
-
+    <img class="verifyLogo IDPLogo" src="/../public/images/experianWhite.png" alt="Logo"/>
+    <div class="govuk-form-group IDPTestContainer">
+      <h1 class="govuk-heading-l white">Identity Test</h1>
+      <p class="govuk-body govuk-!-font-weight-bold white govuk-!-margin-bottom-1">What we're going to do</p>
+      <p class="govuk-body white">We're going to ask you some questions that only you should know the answers to.</p>
+      <p class="govuk-body govuk-!-font-weight-bold white govuk-!-margin-bottom-1">Why we do this</p>
+      <p class="govuk-body white">This is to make sure someone else isn't pretending to be you by using your personal details or a copy of your passport or driving licence.</p>
+      <div class="govuk-button-group">
+        <form action="idp4a">
+          <button class="govuk-button verifyButton govuk-button--inverse govuk-!-margin-top-4 govuk-body govuk-!-font-weight-bold" data-module="govuk-button">
+            Next ➔
+          </button>
+        </form>
+      </div>
+    </div>
   </div>
+
+  <div class="idpOneThird">
+    <div></div>
+    <div></div>
+    <img class="IDPOverlay" src="/../public/images/Overlay.png" alt="Logo"/>
+  </div>
+
+
 </div>
 
 {% endblock %}
